@@ -7,15 +7,21 @@ namespace Lesson1LabA
     {
         static void Main(string[] args)
         {
-            ArrayList zoo = new ArrayList();
+            ArrayList objects = new ArrayList();
+
+            UserInput newInput = new UserInput();
+
+            Object newObject = newInput.returnObject();
+
+            objects.Add(newObject);
 
             // Lines to Replace Begin Here
-            zoo.Add(new Dog(true, "Bean"));
-            zoo.Add(new Cat(9, "Charlie"));
-            zoo.Add(new Teacher(44, "Stacy Read"));
+            //bjects.Add(new Dog(true, "Bean"));
+            //objects.Add(new Cat(9, "Charlie"));
+            //objects.Add(new Teacher(44, "Stacy Read"));
             // End Lines to Replace
 
-            foreach (Talkable thing in zoo)
+            foreach (Talkable thing in objects)
             {
                 Console.WriteLine(thing.toString());
             }
